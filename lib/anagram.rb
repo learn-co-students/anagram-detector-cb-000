@@ -9,6 +9,7 @@ class Anagram
   end
 
   def match(match_words)
+    # MY BAD WAY
     # matches = []
     # letters = @word.split("").sort
     # match_words.each do |match_word|
@@ -19,6 +20,7 @@ class Anagram
     # end
     # matches
 
+    # THEIR SMART WAY
     match_words.select do |word|
       word.split("").sort == @word.split("").sort
     end
