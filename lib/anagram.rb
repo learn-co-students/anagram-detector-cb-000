@@ -7,10 +7,8 @@ class Anagram
   end
 
   def match(match)
-    list = []
     match.select do | match_word |
-      list << match_word if match_word.split("").sort == word.split("").sort
+      match_word.split("").sort == word.split("").sort
     end
-    list
   end
 end
