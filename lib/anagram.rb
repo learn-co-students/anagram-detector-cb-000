@@ -7,10 +7,8 @@ class Anagram
     @word = word
   end
 
-  def match(ana)
+  def match(arr)
     # binding.pry
-    ana.delete_if do |ana|
-      ana.split('').sort != @word.split('').sort
-    end
+    arr.select {|x| x.split('').sort == @word.split('').sort }
   end
 end
