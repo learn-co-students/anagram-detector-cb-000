@@ -1,17 +1,13 @@
 # Your code goes here!
 class Anagram
-  attr_accessor :string
+  attr_accessor :name
 
-  def initialize(string)
-    @string = string
+  def initialize(word)
+    @name = word
   end
 
-  def sort_string(string)
-    string.split("").sort
-  end
-
-  def match(word_array)
-    word_array.find_all {|string| sort_string(string) == sort_string(@string)}
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
   end
 
 end
