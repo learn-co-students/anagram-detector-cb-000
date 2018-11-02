@@ -16,4 +16,10 @@ class Anagram
       end
       return_array
     end
+=begin
+def match(array)
+ array.select {|x| x.split("").sort == @name.split("").sort}
+end
+
+=end
 end
